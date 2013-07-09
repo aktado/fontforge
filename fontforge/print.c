@@ -2791,7 +2791,7 @@ unichar_t *PrtBuildDef( SplineFont *sf, void *tf,
 	rcnt = 0;
 	for ( s=0; s<therecnt; ++s ) if ( !ScriptInList(scriptsthere[s],scriptsdone,scnt)) {
 	    if ( ret ) {
-		if ( randoms[rcnt]!='\0' ) {
+		if ( randoms[rcnt]!=NULL ) {
 		    utf82u_strcpy(ret+len,randoms[rcnt]);
 		    len += u_strlen(ret+len);
 		    ret[len++] = '\n';
